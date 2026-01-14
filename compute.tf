@@ -50,7 +50,7 @@ resource "aws_security_group" "web_sg" {
 # 3. The Server (EC2 Instance)
 resource "aws_instance" "web_server" {
   ami           = data.aws_ami.ubuntu.id # Use the ID found above
-  instance_type = "t2.micro"             # <--- FREE TIER ELIGIBLE
+  instance_type = var.instance_type             # <--- FREE TIER ELIGIBLE
   subnet_id     = aws_subnet.public_subnet.id
   
   # Attach the firewall
