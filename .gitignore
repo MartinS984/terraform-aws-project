@@ -1,0 +1,14 @@
+# .gitignore
+
+# Local .terraform directories (The heavy plugins)
+**/.terraform/*
+
+# .tfstate files (These contain sensitive info about your infrastructure)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore variables file if it contains secrets (optional for now, but good practice)
+*.tfvars
