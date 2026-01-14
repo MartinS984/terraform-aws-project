@@ -63,8 +63,3 @@ resource "aws_instance" "web_server" {
     Name = "DevOps-FreeTier-Server"
   }
 }
-
-# 4. Print the IP address at the end
-output "web_server_url" {
-  value = "http://${aws_instance.web_server.public_ip}"
-}
